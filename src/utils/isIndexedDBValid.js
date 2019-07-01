@@ -17,9 +17,18 @@ function isIndexedDBValid() {
             !/Chrome/.test(navigator.userAgent) &&
             !/BlackBerry/.test(navigator.platform);
 
-        var hasFetch =
-            typeof fetch === 'function' &&
-            fetch.toString().indexOf('[native code') !== -1;
+        var u = navigator.userAgent,
+            version = '';
+        if (u.indexOf('Mac OS X') > -1) {
+            var regStr_saf = /OS [\d._]*/gi;
+            var verinfo = u.match(regStr_saf);
+            version = (verinfo + '')
+                .replace(/[^0-9|_.]/gi, '')
+                .replace(/_/gi, '.');
+            version = parseFloat(version);
+        }
+
+        var hasFetch = version >= 10.3 ? true : false;
 
         // Safari <10.1 does not meet our requirements for IDB support
         // (see: https://github.com/pouchdb/pouchdb/issues/5572).

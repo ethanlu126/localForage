@@ -1,5 +1,5 @@
 {
-  "name": "localforage",
+  "name": "@kitten-team/localforage",
   "author": "Mozilla",
   "license": "Apache-2.0",
   "description": "Offline storage, improved.",
@@ -9,7 +9,7 @@
     "storage",
     "websql"
   ],
-  "version": "1.7.3",
+  "version": "1.7.4",
   "homepage": "https://github.com/localForage/localForage",
   "repository": {
     "type": "git",
