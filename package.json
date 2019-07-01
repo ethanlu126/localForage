@@ -1,6 +1,6 @@
 {
   "name": "@kitten-team/localforage",
-  "author": "Mozilla",
+  "author": "kitten-team",
   "license": "Apache-2.0",
   "description": "Offline storage, improved.",
   "keywords": [
